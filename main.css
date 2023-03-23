@@ -130,4 +130,8 @@ rowsmall{
         column-gap: 0.3em;
     }
 
+    .message{
+        display: none;
+    }
+
  }
