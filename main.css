@@ -26,7 +26,7 @@ keyboard{
 
 .input{
     color: #000;
-    background-color: #fff;
+    background-color: #fdfdfd;
     border: 0px;
     border-radius: 10px;
     padding: 0.5em;
@@ -34,6 +34,11 @@ keyboard{
     height: 12em;
     font-size: 1.2em;
     font-weight: 600;
+}
+
+.message{
+    width: 100%;
+    text-align: center;
 }
 
 buttons{
@@ -65,3 +70,64 @@ p{
     height: 3.5em;
 }
 
+rowsmall{
+    display: none;
+}
+
+@media (max-width: 900px) { 
+
+    body{
+        padding: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    keyboard{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+        border: 0px;
+        padding: 2em 0.5em;
+        border-radius: 25px;
+        row-gap: 1em;
+        background-color: #dadada;
+    }
+
+    .input{
+        color: #000;
+        background-color: #fdfdfd;
+        border-radius: 5px;
+        padding: 0.5em;
+        width: 14.5em;
+        height: 15em;
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    button{
+        width: 1.8em;
+        height: 2em;
+    }
+
+
+    .space{
+        width: 8em;
+        height: 2.2em;
+    }
+
+    row{
+        display: none;
+    }
+
+    rowsmall{
+        display: flex;
+        justify-content: space-betweens;
+        align-items: center;
+        column-gap: 0.3em;
+    }
+
+ }

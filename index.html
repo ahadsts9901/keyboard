@@ -27,13 +27,13 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <h2>This is a keyboard</h2>
-    <keyboard>
-        <textbox>
+    <h2 class="animate__animated animate__fadeInLeft">This is a keyboard</h2>
+    <keyboard class="animate__animated animate__fadeInDown">
+        <textbox class="animate__animated animate__fadeInRight">
             <textarea readonly type="text" class="input" id="text"></textarea>
         </textbox>
-        <div class="message"><b>Control Screen Size From The Bottom Right Corner</b></div>
-        <buttons>
+        <p class="message"><b>Control Screen Size From<br/>The Bottom Right Corner</b></p>
+        <buttons class="animate__animated animate__fadeInLeft">
             <row>
                 <button type="button" class="btn btn-secondary" onclick="getnumber('1')">1</button>
                 <button type="button" class="btn btn-secondary" onclick="getnumber('2')">2</button>
@@ -79,7 +79,7 @@
                 <button type="button" class="btn btn-dark" onclick="getnumber('N')">N</button>
                 <button type="button" class="btn btn-dark" onclick="getnumber('M')">M</button>
                 <button type="button" class="btn btn-success" onclick="getnumber('.')">.</button>
-                <button type="button" class="btn btn-danger big" onclick="Back()"><i class="bi bi-backspace"></i></button>
+                <button type="button" class="btn btn-danger" onclick="Back()"><i class="bi bi-backspace"></i></button>
             </row>
             <row>
                 <button type="button" class="btn btn-success" onclick="getnumber('+')">+</button>
@@ -90,9 +90,66 @@
                 <button type="button" class="btn btn-success" onclick="getnumber('/')">/</button>
                 <button type="button" class="btn btn-success" onclick="getnumber('*')">*</button>
             </row>
+            <!-- responsive buttons -->
+            <rowsmall>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('1')">1</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('2')">2</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('3')">3</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('4')">4</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('5')">5</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('6')">6</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('7')">7</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('8')">8</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('9')">9</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('0')">0</button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('Q')">Q</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('W')">W</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('E')">E</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('R')">R</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('T')">T</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('Y')">Y</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('U')">U</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('I')">I</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('O')">O</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('P')">P</button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('A')">A</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('S')">S</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('D')">D</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('F')">F</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('G')">G</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('H')">H</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('J')">J</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('K')">K</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('L')">L</button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('?')">?</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('Z')">Z</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('X')">X</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('C')">C</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('V')">V</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('B')">B</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('N')">N</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('M')">M</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('.')">.</button>
+                <button type="button" class="btn btn-danger btn-sm big" onclick="Back()"><i class="bi bi-backspace"></i></button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('+')">+</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('-')">_</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('&')">&</button>
+                <button type="button" class="btn btn-primary btn-sm space" onclick="getnumber('  ')">Space</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber(',')">,</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('/')">/</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('*')">*</button>
+            </rowsmall>
         </buttons>
     </keyboard>
-    <br/>
+    <hr/>
     <p>Thanks For Visiting</p>
     <p>Regards! Muhammad Ahad&copy;</p>
 </body>
