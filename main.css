@@ -1,137 +1,174 @@
-*{
-    font-family: 'Ruda', 'sans-serif';
+* {
+    font-family: "Ruda", "sans-serif";
+    font-weight: bold;
 }
 
-body{
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-keyboard{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2em;
-    border: 0px;
-    padding: 1em;
-    padding-bottom: 2em;
-    border-radius: 25px;
-    row-gap: 1em;
-    background-color: #dadada;
-}
-
-.input{
-    color: #000;
-    background-color: #fdfdfd;
-    border: 0px;
-    border-radius: 10px;
-    padding: 0.5em;
-    width: 40em;
-    height: 12em;
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.message{
+.message {
     width: 100%;
     text-align: center;
 }
 
-buttons{
+.message-mobile {
+    display: none;
+}
+
+.maincontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dice {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 1em;
+    row-gap: 10em;
+    padding: 0em 1em;
 }
 
-button{
-    width: 3.5em;
-    height: 3.5em;
-}
-
-row{
+.dice-1,
+.dice-2 {
     display: flex;
-    justify-content: space-betweens;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    column-gap: 1.3em;
+    row-gap: 0.2em;
 }
 
-p{
-    font-weight: bold; 
+#dice-1,
+#dice-2 {
+    width: 1em;
+    height: 1em;
+    font-size: 3em;
+    border: 0px;
+    margin: 0em;
 }
 
-.space{
-    width: 18em;
-    height: 3.5em;
+.button-2 {
+    background-color: #212121;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid #212121;
+    width: 6em;
+    height: 3em;
+    font-size: 0.9em;
+    margin: 1em;
 }
 
-rowsmall{
-    display: none;
+.button-1 {
+    background-color: #fff;
+    color: #212121;
+    border-radius: 10px;
+    text-decoration: none;
+    border: 2px solid #212121;
+    width: 6em;
+    height: 3em;
+    font-size: 0.9em;
+    margin: 1em;
 }
 
-@media (max-width: 900px) { 
+p {
+    margin: 0em;
+}
 
-    body{
-        padding: 3em 0.5em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    position: absolute;
+    top: 5.1em;
+}
+
+.p1 {
+    z-index: 40;
+    color: #797979;
+    font-size: 1.2em;
+}
+
+.p2 {
+    z-index: 60;
+    color: #212121;
+    font-size: 1.2em;
+}
+
+row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 2.3em;
+    height: 2.3em;
+    border: 1px dashed #000;
+    background-color: #fff09e;
+    color: #663500;
+    font-size: 1.4em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+    .maincontainer {
+        flex-direction: column-reverse;
     }
-
-    keyboard{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2em;
-        border: 0px;
-        padding: 2em 0.5em;
-        border-radius: 25px;
-        row-gap: 1em;
-        background-color: #dadada;
+    .dice {
+        flex-direction: row;
+        margin-top: 3em;
+        justify-content: space-between;
+        column-gap: 8em;
     }
+}
 
-    .input{
-        color: #000;
-        background-color: #fdfdfd;
-        border-radius: 5px;
-        padding: 0.5em;
-        width: 14.5em;
-        height: 8em;
-        font-size: 1.2em;
-        font-weight: 600;
+@media only screen and (max-width: 600px) {
+    .box {
+        font-size: 1em;
     }
+}
 
-    button{
-        width: 1.8em;
-        height: 2em;
+@media only screen and (max-width: 420px) {
+    .box {
+        font-size: 0.8em;
     }
-
-
-    .space{
-        width: 8em;
-        height: 2.2em;
+    .dice {
+        column-gap: 4em;
     }
-
-    row{
+    .message {
         display: none;
     }
-
-    rowsmall{
-        display: flex;
-        justify-content: space-betweens;
-        align-items: center;
-        column-gap: 0.3em;
+    .message-mobile {
+        display: block;
+        width: 100%;
+        text-align: center;
     }
+}
 
-    .message{
-        display: none;
+@media only screen and (max-width: 325px) {
+    .box {
+        font-size: 0.6em;
     }
-
- }
+    .dice {
+        column-gap: 1em;
+        font-size: 0.8em;
+    }
+}
