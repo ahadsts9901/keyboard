@@ -2,328 +2,158 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Snake Ladder Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Keyboard</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <!-- icons cdn -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <!-- font cdn -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- bootstrap cdn -->
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <!-- animate.style cdn -->
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
-
-    <script src="main.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src='main.js'></script>
 </head>
 
 <body>
-    <audio src="./media/audio/success sound.mp3" id="audio" preload="auto"></audio>
-    <h1 class="message"><i class="bi bi-dice-6-fill icon"></i> Snake Ladder Game</h1>
-    <h1 class="message-mobile"><i class="bi bi-dice-6-fill icon"></i> Saanp Seedhi</h1>
-    <div class="maincontainer">
-        <!-- dice -->
-        <div class="dice">
-            <div class="dice-1">
-                <p type="text" id="dice-1"></p>
-                <button class="button-1" type="button" onclick="dice1(); audio()">Roll Dice</button>
-                <p>Player Grey</p>
-            </div>
-            <div class="dice-2">
-                <p type="text" id="dice-2"></p>
-                <button class="button-2" type="button" onclick="dice2(); audio()">Roll Dice</button>
-                <p>Player Black</p>
-            </div>
-        </div>
-        <div class="subcontainer">
-            <div class="container">
-
-                <!-- first player path -->
-
-                <!-- row 1 -->
-                <row>
-                    <p class="box" id="100">100</p>
-                    <p class="box" id="99">99</p>
-                    <p class="box" id="98">98</p>
-                    <p class="box" id="97">97</p>
-                    <p class="box" id="96">96</p>
-                    <p class="box" id="95">95</p>
-                    <p class="box" id="94">94</p>
-                    <p class="box" id="93">93</p>
-                    <p class="box" id="92">92</p>
-                    <p class="box" id="91">91</p>
-                </row>
-                <!-- row 2 -->
-                <row>
-                    <p class="box" id="81">81</p>
-                    <p class="box" id="82">82</p>
-                    <p class="box" id="83">83</p>
-                    <p class="box" id="84">84</p>
-                    <p class="box" id="85">85</p>
-                    <p class="box" id="86">86</p>
-                    <p class="box" id="87">87</p>
-                    <p class="box" id="88">88</p>
-                    <p class="box" id="89">89</p>
-                    <p class="box" id="90">90</p>
-                </row>
-                <!-- row 3 -->
-                <row>
-                    <p class="box" id="80">80</p>
-                    <p class="box" id="79">79</p>
-                    <p class="box" id="78">78</p>
-                    <p class="box" id="77">77</p>
-                    <p class="box" id="76">76</p>
-                    <p class="box" id="75">75</p>
-                    <p class="box" id="74">74</p>
-                    <p class="box" id="73">73</p>
-                    <p class="box" id="72">72</p>
-                    <p class="box" id="71">71</p>
-                </row>
-                <!-- row 4 -->
-                <row>
-                    <p class="box" id="61">61</p>
-                    <p class="box" id="62">62</p>
-                    <p class="box" id="63">63</p>
-                    <p class="box" id="64">64</p>
-                    <p class="box" id="65">65</p>
-                    <p class="box" id="66">66</p>
-                    <p class="box" id="67">67</p>
-                    <p class="box" id="68">68</p>
-                    <p class="box" id="69">69</p>
-                    <p class="box" id="70">70</p>
-                </row>
-                <!-- row 5 -->
-                <row>
-                    <p class="box" id="60">60</p>
-                    <p class="box" id="59">59</p>
-                    <p class="box" id="58">58</p>
-                    <p class="box" id="57">57</p>
-                    <p class="box" id="56">56</p>
-                    <p class="box" id="55">55</p>
-                    <p class="box" id="54">54</p>
-                    <p class="box" id="53">53</p>
-                    <p class="box" id="52">52</p>
-                    <p class="box" id="51">51</p>
-                </row>
-                <!-- row 6 -->
-                <row>
-                    <p class="box" id="41">41</p>
-                    <p class="box" id="42">42</p>
-                    <p class="box" id="43">43</p>
-                    <p class="box" id="44">44</p>
-                    <p class="box" id="45">45</p>
-                    <p class="box" id="46">46</p>
-                    <p class="box" id="47">47</p>
-                    <p class="box" id="48">48</p>
-                    <p class="box" id="49">49</p>
-                    <p class="box" id="50">50</p>
-                </row>
-                <!-- row 7 -->
-                <row>
-                    <p class="box" id="40">40</p>
-                    <p class="box" id="39">39</p>
-                    <p class="box" id="38">38</p>
-                    <p class="box" id="37">37</p>
-                    <p class="box" id="36">36</p>
-                    <p class="box" id="35">35</p>
-                    <p class="box" id="34">34</p>
-                    <p class="box" id="33">33</p>
-                    <p class="box" id="32">32</p>
-                    <p class="box" id="31">31</p>
-                </row>
-                <!-- row 8 -->
-                <row>
-                    <p class="box" id="21">21</p>
-                    <p class="box" id="22">22</p>
-                    <p class="box" id="23">23</p>
-                    <p class="box" id="24">24</p>
-                    <p class="box" id="25">25</p>
-                    <p class="box" id="26">26</p>
-                    <p class="box" id="27">27</p>
-                    <p class="box" id="28">28</p>
-                    <p class="box" id="29">29</p>
-                    <p class="box" id="30">30</p>
-                </row>
-                <!-- row 9 -->
-                <row>
-                    <p class="box" id="20">20</p>
-                    <p class="box" id="19">19</p>
-                    <p class="box" id="18">18</p>
-                    <p class="box" id="17">17</p>
-                    <p class="box" id="16">16</p>
-                    <p class="box" id="15">15</p>
-                    <p class="box" id="14">14</p>
-                    <p class="box" id="13">13</p>
-                    <p class="box" id="12">12</p>
-                    <p class="box" id="11">11</p>
-                </row>
-                <!-- row 10 -->
-                <row>
-                    <p class="box" id="1">1</p>
-                    <p class="box" id="2">2</p>
-                    <p class="box" id="3">3</p>
-                    <p class="box" id="4">4</p>
-                    <p class="box" id="5">5</p>
-                    <p class="box" id="6">6</p>
-                    <p class="box" id="7">7</p>
-                    <p class="box" id="8">8</p>
-                    <p class="box" id="9">9</p>
-                    <p class="box" id="10">10</p>
-                </row>
-
-            </div>
-            <div class="container-2">
-
-                <!-- row 1 -->
-                <row>
-                    <p class="box" id="200">100</p>
-                    <p class="box" id="199">99</p>
-                    <p class="box" id="198">98</p>
-                    <p class="box" id="197">97</p>
-                    <p class="box" id="196">96</p>
-                    <p class="box" id="195">95</p>
-                    <p class="box" id="194">94</p>
-                    <p class="box" id="193">93</p>
-                    <p class="box" id="192">92</p>
-                    <p class="box" id="191">91</p>
-                </row>
-                <!-- row 2 -->
-                <row>
-                    <p class="box" id="181">81</p>
-                    <p class="box" id="182">82</p>
-                    <p class="box" id="183">83</p>
-                    <p class="box" id="184">84</p>
-                    <p class="box" id="185">85</p>
-                    <p class="box" id="186">86</p>
-                    <p class="box" id="187">87</p>
-                    <p class="box" id="188">88</p>
-                    <p class="box" id="189">89</p>
-                    <p class="box" id="190">90</p>
-                </row>
-                <!-- row 3 -->
-                <row>
-                    <p class="box" id="180">80</p>
-                    <p class="box" id="179">79</p>
-                    <p class="box" id="178">78</p>
-                    <p class="box" id="177">77</p>
-                    <p class="box" id="176">76</p>
-                    <p class="box" id="175">75</p>
-                    <p class="box" id="174">74</p>
-                    <p class="box" id="173">73</p>
-                    <p class="box" id="172">72</p>
-                    <p class="box" id="171">71</p>
-                </row>
-                <!-- row 4 -->
-                <row>
-                    <p class="box" id="161">61</p>
-                    <p class="box" id="162">62</p>
-                    <p class="box" id="163">63</p>
-                    <p class="box" id="164">64</p>
-                    <p class="box" id="165">65</p>
-                    <p class="box" id="166">66</p>
-                    <p class="box" id="167">67</p>
-                    <p class="box" id="168">68</p>
-                    <p class="box" id="169">69</p>
-                    <p class="box" id="170">70</p>
-                </row>
-                <!-- row 5 -->
-                <row>
-                    <p class="box" id="160">60</p>
-                    <p class="box" id="159">59</p>
-                    <p class="box" id="158">58</p>
-                    <p class="box" id="157">57</p>
-                    <p class="box" id="156">56</p>
-                    <p class="box" id="155">55</p>
-                    <p class="box" id="154">54</p>
-                    <p class="box" id="153">53</p>
-                    <p class="box" id="152">52</p>
-                    <p class="box" id="151">51</p>
-                </row>
-                <!-- row 6 -->
-                <row>
-                    <p class="box" id="141">41</p>
-                    <p class="box" id="142">42</p>
-                    <p class="box" id="143">43</p>
-                    <p class="box" id="144">44</p>
-                    <p class="box" id="145">45</p>
-                    <p class="box" id="146">46</p>
-                    <p class="box" id="147">47</p>
-                    <p class="box" id="148">48</p>
-                    <p class="box" id="149">49</p>
-                    <p class="box" id="150">50</p>
-                </row>
-                <!-- row 7 -->
-                <row>
-                    <p class="box" id="140">40</p>
-                    <p class="box" id="139">39</p>
-                    <p class="box" id="138">38</p>
-                    <p class="box" id="137">37</p>
-                    <p class="box" id="136">36</p>
-                    <p class="box" id="135">35</p>
-                    <p class="box" id="134">34</p>
-                    <p class="box" id="133">33</p>
-                    <p class="box" id="132">32</p>
-                    <p class="box" id="131">31</p>
-                </row>
-                <!-- row 8 -->
-                <row>
-                    <p class="box" id="121">21</p>
-                    <p class="box" id="122">22</p>
-                    <p class="box" id="123">23</p>
-                    <p class="box" id="124">24</p>
-                    <p class="box" id="125">25</p>
-                    <p class="box" id="126">26</p>
-                    <p class="box" id="127">27</p>
-                    <p class="box" id="128">28</p>
-                    <p class="box" id="129">29</p>
-                    <p class="box" id="130">30</p>
-                </row>
-                <!-- row 9 -->
-                <row>
-                    <p class="box" id="120">20</p>
-                    <p class="box" id="119">19</p>
-                    <p class="box" id="118">18</p>
-                    <p class="box" id="117">17</p>
-                    <p class="box" id="116">16</p>
-                    <p class="box" id="115">15</p>
-                    <p class="box" id="114">14</p>
-                    <p class="box" id="113">13</p>
-                    <p class="box" id="112">12</p>
-                    <p class="box" id="111">11</p>
-                </row>
-                <!-- row 10 -->
-                <row>
-                    <p class="box" id="101">1</p>
-                    <p class="box" id="102">2</p>
-                    <p class="box" id="103">3</p>
-                    <p class="box" id="104">4</p>
-                    <p class="box" id="105">5</p>
-                    <p class="box" id="106">6</p>
-                    <p class="box" id="107">7</p>
-                    <p class="box" id="108">8</p>
-                    <p class="box" id="109">9</p>
-                    <p class="box" id="110">10</p>
-                </row>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- <p class="center">Thanks For Visiting</p>
-    <p class="center">Regards! Muhammad Ahad&copy;</p> -->
+    <h2 class="animate__animated animate__fadeInLeft">This is a keyboard</h2>
+    <keyboard class="animate__animated animate__fadeInDown">
+        <textbox class="animate__animated animate__fadeInUp">
+            <textarea readonly type="text" class="input" id="text"></textarea>
+        </textbox>
+        <p class="message"><b>Control Screen Size From The Bottom Right Corner</b></p>
+        <buttons class="animate__animated animate__fadeInLeft">
+            <row>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('1')">1</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('2')">2</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('3')">3</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('4')">4</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('5')">5</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('6')">6</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('7')">7</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('8')">8</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('9')">9</button>
+                <button type="button" class="btn btn-secondary" onclick="getnumber('0')">0</button>
+            </row>
+            <row>
+                <button type="button" class="btn btn-dark" onclick="getnumber('Q')">Q</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('W')">W</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('E')">E</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('R')">R</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('T')">T</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('Y')">Y</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('U')">U</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('I')">I</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('O')">O</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('P')">P</button>
+            </row>
+            <row>
+                <button type="button" class="btn btn-dark" onclick="getnumber('A')">A</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('S')">S</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('D')">D</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('F')">F</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('G')">G</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('H')">H</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('J')">J</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('K')">K</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('L')">L</button>
+            </row>
+            <row>
+                <button type="button" class="btn btn-success" onclick="getnumber('?')">?</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('Z')">Z</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('X')">X</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('C')">C</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('V')">V</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('B')">B</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('N')">N</button>
+                <button type="button" class="btn btn-dark" onclick="getnumber('M')">M</button>
+                <button type="button" class="btn btn-success" onclick="getnumber('.')">.</button>
+                <button type="button" class="btn btn-danger" onclick="Back()"><i class="bi bi-backspace"></i></button>
+            </row>
+            <row>
+                <button type="button" class="btn btn-success" onclick="getnumber('+')">+</button>
+                <button type="button" class="btn btn-success" onclick="getnumber('-')">_</button>
+                <button type="button" class="btn btn-success" onclick="getnumber('&')">&</button>
+                <button type="button" class="btn btn-primary space" onclick="getnumber('  ')">Space</button>
+                <button type="button" class="btn btn-success" onclick="getnumber(',')">,</button>
+                <button type="button" class="btn btn-success" onclick="getnumber('/')">/</button>
+                <button type="button" class="btn btn-success" onclick="getnumber('*')">*</button>
+            </row>
+            <!-- responsive buttons -->
+            <rowsmall>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('1')">1</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('2')">2</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('3')">3</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('4')">4</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('5')">5</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('6')">6</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('7')">7</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('8')">8</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('9')">9</button>
+                <button type="button" class="btn btn-secondary btn-sm" onclick="getnumber('0')">0</button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('Q')">Q</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('W')">W</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('E')">E</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('R')">R</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('T')">T</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('Y')">Y</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('U')">U</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('I')">I</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('O')">O</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('P')">P</button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('A')">A</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('S')">S</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('D')">D</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('F')">F</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('G')">G</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('H')">H</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('J')">J</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('K')">K</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('L')">L</button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('?')">?</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('Z')">Z</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('X')">X</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('C')">C</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('V')">V</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('B')">B</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('N')">N</button>
+                <button type="button" class="btn btn-dark btn-sm" onclick="getnumber('M')">M</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('.')">.</button>
+                <button type="button" class="btn btn-danger btn-sm big" onclick="Back()"><i class="bi bi-backspace"></i></button>
+            </rowsmall>
+            <rowsmall>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('+')">+</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('-')">_</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('&')">&</button>
+                <button type="button" class="btn btn-primary btn-sm space" onclick="getnumber('  ')">Space</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber(',')">,</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('/')">/</button>
+                <button type="button" class="btn btn-success btn-sm" onclick="getnumber('*')">*</button>
+            </rowsmall>
+        </buttons>
+    </keyboard>
+    <hr/>
+    <p>Thanks For Visiting</p>
+    <p>Regards! Muhammad Ahad&copy;</p>
 </body>
 
 </html>
